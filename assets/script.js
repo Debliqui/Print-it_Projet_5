@@ -1,3 +1,12 @@
+let flecheGuache = document.querySelector('.arrow_left')
+flecheGuache.addEventListener("click", () => {
+	console.log("Fleche gauche cliqué")
+})
+
+let flecheDroite = document.querySelector('.arrow_right')
+flecheDroite.addEventListener("click", () => {
+	console.log("Fleche droite cliqué")
+})
 const slides = [
 	{
 		"image":"slide1.jpg",
