@@ -39,12 +39,15 @@ flecheDroite.addEventListener("click", () => {
 		if(listSlide[i] === dotSelected) {
 			listSlide[i].classList.remove("dot_selected")
 			i++
+			if ( listSlide[i] === undefined){
+				i = 0
+			}
 			listSlide[i].classList.add("dot_selected")
 			bannerImg.src = slides[i].image
 			console.log(bannerImg)
 			tagLine.innerHTML = slides[i].tagLine
+			break
 		}
-		
 	}
 	
 })
@@ -59,6 +62,9 @@ flecheGauche.addEventListener("click", () => {
 		if (listSlide[i] === dotSelected) {
 			listSlide[i].classList.remove("dot_selected")
 			i--
+			if (i < 0) {
+				i = listSlide.length - 1
+			}
 			listSlide[i].classList.add("dot_selected")
 			bannerImg.src = slides[i].image
 			console.log(bannerImg)
