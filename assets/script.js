@@ -17,6 +17,17 @@ const slides = [
 	}
 ]
 
+let bulletPointsContainer = document.querySelector('.dots');
+for (let nbrBullets = 0; nbrBullets < slides.length; nbrBullets++) {
+    let bulletPoint = document.createElement("div");
+    bulletPoint.classList.add("dot");
+    bulletPoint.setAttribute("id", `slide${nbrBullets}`);
+    bulletPointsContainer.appendChild(bulletPoint);
+}
+
+let bulletSelected = document.getElementById("slide0")
+bulletSelected.classList.add("dot_selected")
+
 
 let flecheDroite = document.querySelector('.arrow_right')
 flecheDroite.addEventListener("click", () => {
