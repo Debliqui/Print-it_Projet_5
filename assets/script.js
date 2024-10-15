@@ -1,27 +1,59 @@
-let flecheGuache = document.querySelector('.arrow_left')
-flecheGuache.addEventListener("click", () => {
-	console.log("Fleche gauche cliqué")
-})
-
-let flecheDroite = document.querySelector('.arrow_right')
-flecheDroite.addEventListener("click", () => {
-	console.log("Fleche droite cliqué")
-})
 const slides = [
 	{
-		"image":"slide1.jpg",
+		"image":"./assets/images/slideshow/slide1.jpg",
 		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
 	},
 	{
-		"image":"slide2.jpg",
+		"image":"./assets/images/slideshow/slide2.jpg",
 		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
 	},
 	{
-		"image":"slide3.jpg",
+		"image":"./assets/images/slideshow/slide3.jpg",
 		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
 	},
 	{
-		"image":"slide4.png",
+		"image":"./assets/images/slideshow/slide4.png",
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+
+
+let flecheDroite = document.querySelector('.arrow_right')
+flecheDroite.addEventListener("click", () => {
+	let listSlide = document.querySelectorAll('.dot')
+	let dotSelected = document.querySelector('.dot_selected')
+	let bannerImg = document.querySelector('.banner-img')
+	let tagLine = document.querySelector('p')
+	for (let i = 0; i < listSlide.length; i++){
+		if(listSlide[i] === dotSelected) {
+			listSlide[i].classList.remove("dot_selected")
+			i++
+			listSlide[i].classList.add("dot_selected")
+			bannerImg.src = slides[i].image
+			console.log(bannerImg)
+			tagLine.innerHTML = slides[i].tagLine
+		}
+		
+	}
+	
+})
+
+let flecheGauche = document.querySelector('.arrow_left')
+flecheGauche.addEventListener("click", () => {
+	let listSlide = document.querySelectorAll('.dot')
+	let dotSelected = document.querySelector('.dot_selected')
+	let bannerImg = document.querySelector('.banner-img')
+	let tagLine = document.querySelector('p')
+	for (let i = 0; i < listSlide.length; i++){
+		if (listSlide[i] === dotSelected) {
+			listSlide[i].classList.remove("dot_selected")
+			i--
+			listSlide[i].classList.add("dot_selected")
+			bannerImg.src = slides[i].image
+			console.log(bannerImg)
+			tagLine.innerHTML = slides[i].tagLine
+			break
+		}
+	}
+})
+
