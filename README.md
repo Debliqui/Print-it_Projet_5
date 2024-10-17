@@ -2,4 +2,4 @@
 Site Print It
 	
 ## GitHub Pages
-https://debliqui.github.io/Print-it_Porjet_5/
+https://debliqui.github.io/Print-it_Projet_5/
