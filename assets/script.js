@@ -55,7 +55,7 @@ sliderNext.addEventListener("click", () => {
 })
 
 // EventListener to left-arrow click
-let sliderBack = document.querySelector('.arrow_left')
+const sliderBack = document.querySelector('.arrow_left')
 sliderBack.addEventListener("click", () => {
 	let listSlide = document.querySelectorAll('.dot')
 	let dotSelected = document.querySelector('.dot_selected')
