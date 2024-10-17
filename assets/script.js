@@ -19,25 +19,25 @@ const slides = [
 ]
 
 // Insert bullet points
-let bulletPointsContainer = document.querySelector('.dots');
+const bulletPointsContainer = document.querySelector('.dots');
 for (let nbrBullets = 0; nbrBullets < slides.length; nbrBullets++) {
-    let bulletPoint = document.createElement("div");
+    const bulletPoint = document.createElement("div");
     bulletPoint.classList.add("dot");
     bulletPoint.setAttribute("id", `slide${nbrBullets}`);
     bulletPointsContainer.appendChild(bulletPoint);
 }
 
 // assign first slide as default selection
-let bulletSelected = document.getElementById("slide0")
+const bulletSelected = document.getElementById("slide0")
 bulletSelected.classList.add("dot_selected")
 
 // EventListener to right-arrow click
 const sliderNext = document.querySelector('.arrow_right')
 sliderNext.addEventListener("click", () => {
-	let listSlide = document.querySelectorAll('.dot')
-	let dotSelected = document.querySelector('.dot_selected')
-	let bannerImg = document.querySelector('.banner-img')
-	let tagLine = document.querySelector('p')
+	const listSlide = document.querySelectorAll('.dot')
+	const dotSelected = document.querySelector('.dot_selected')
+	const bannerImg = document.querySelector('.banner-img')
+	const tagLine = document.querySelector('#banner > p')
 	for (let i = 0; i < listSlide.length; i++){
 		if(listSlide[i] === dotSelected) {
 			listSlide[i].classList.remove("dot_selected")
@@ -57,10 +57,10 @@ sliderNext.addEventListener("click", () => {
 // EventListener to left-arrow click
 const sliderBack = document.querySelector('.arrow_left')
 sliderBack.addEventListener("click", () => {
-	let listSlide = document.querySelectorAll('.dot')
-	let dotSelected = document.querySelector('.dot_selected')
-	let bannerImg = document.querySelector('.banner-img')
-	let tagLine = document.querySelector('p')
+	const listSlide = document.querySelectorAll('.dot')
+	const dotSelected = document.querySelector('.dot_selected')
+	const bannerImg = document.querySelector('.banner-img')
+	const tagLine = document.querySelector('#banner > p')
 	for (let i = 0; i < listSlide.length; i++){
 		if (listSlide[i] === dotSelected) {
 			listSlide[i].classList.remove("dot_selected")
