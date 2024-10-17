@@ -37,7 +37,7 @@ sliderNext.addEventListener("click", () => {
 	const listSlide = document.querySelectorAll('.dot')
 	const dotSelected = document.querySelector('.dot_selected')
 	const bannerImg = document.querySelector('.banner-img')
-	const tagLine = document.querySelector('p')
+	const tagLine = document.querySelector('#banner > p')
 	for (let i = 0; i < listSlide.length; i++){
 		if(listSlide[i] === dotSelected) {
 			listSlide[i].classList.remove("dot_selected")
@@ -60,7 +60,7 @@ sliderBack.addEventListener("click", () => {
 	const listSlide = document.querySelectorAll('.dot')
 	const dotSelected = document.querySelector('.dot_selected')
 	const bannerImg = document.querySelector('.banner-img')
-	const tagLine = document.querySelector('p')
+	const tagLine = document.querySelector('#banner > p')
 	for (let i = 0; i < listSlide.length; i++){
 		if (listSlide[i] === dotSelected) {
 			listSlide[i].classList.remove("dot_selected")
