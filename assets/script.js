@@ -32,8 +32,8 @@ let bulletSelected = document.getElementById("slide0")
 bulletSelected.classList.add("dot_selected")
 
 // EventListener to right-arrow click
-let flecheDroite = document.querySelector('.arrow_right')
-flecheDroite.addEventListener("click", () => {
+const sliderNext = document.querySelector('.arrow_right')
+sliderNext.addEventListener("click", () => {
 	let listSlide = document.querySelectorAll('.dot')
 	let dotSelected = document.querySelector('.dot_selected')
 	let bannerImg = document.querySelector('.banner-img')
@@ -55,8 +55,8 @@ flecheDroite.addEventListener("click", () => {
 })
 
 // EventListener to left-arrow click
-let flecheGauche = document.querySelector('.arrow_left')
-flecheGauche.addEventListener("click", () => {
+const sliderBack = document.querySelector('.arrow_left')
+sliderBack.addEventListener("click", () => {
 	let listSlide = document.querySelectorAll('.dot')
 	let dotSelected = document.querySelector('.dot_selected')
 	let bannerImg = document.querySelector('.banner-img')
