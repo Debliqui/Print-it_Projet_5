@@ -23,6 +23,7 @@ const bulletPointsContainer = document.querySelector('.dots');
 for (let nbrBullets = 0; nbrBullets < slides.length; nbrBullets++) {
     const bulletPoint = document.createElement("div");
     bulletPoint.classList.add("dot");
+    bulletPoint.setAttribute("id", `slide${nbrBullets}`);
     bulletPointsContainer.appendChild(bulletPoint);
 }
 
